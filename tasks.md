@@ -66,8 +66,7 @@ SELECT * FROM matches WHERE awayteam = 'Huddersfield' AND hometeam = 'Swansea' O
 8) How many draws were there in the `Eredivisie` between 2010 and 2015?
 
 ```sql
-<!-- Copy solution here -->
-
+SELECT COUNT(*) FROM matches WHERE division_code LIKE '%N1%' AND ftr = 'D' AND season > '2009' AND season < '2016';
 
 ```
 
