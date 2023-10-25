@@ -53,7 +53,12 @@ SELECT COUNT(DISTINCT hometeam) FROM matches WHERE division_code = 'F1' OR divis
 7) Have Huddersfield played Swansea in any of the recorded matches?
 
 ```sql
-<!-- Copy solution here -->
+-- If the count > 0, they have played a game/s.
+-- Huddersfield and Swansea have played 12 games in total
+SELECT COUNT(*) FROM matches WHERE awayteam = 'Huddersfield' AND hometeam = 'Swansea' OR hometeam = 'Huddersfield' AND awayteam = 'Swansea';
+
+-- Here is the detail of all the games they played together:
+SELECT * FROM matches WHERE awayteam = 'Huddersfield' AND hometeam = 'Swansea' OR hometeam = 'Huddersfield' AND awayteam = 'Swansea';
 
 
 ```
